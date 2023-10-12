@@ -1,0 +1,16 @@
+{
+  "name": "benchmarks-comparisons",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/benchmark": "^2.1.3",
+    "benchmark": "2.1.4",
+    "isitfast": "^0.0.8",
+    "mitata": "^0.1.6"
+  }
+}
