@@ -1,21 +1,5 @@
 #!/bin/bash
 
-# $suites = [
-#   './benchs/deleting-benchmarks',
-#   './benchs/fs-read-sync',
-#   './benchs/string-replace',
-#   './benchs/string-searching',
-# ]
-
-# $benchmarks = [
-#   'benchmark.mjs',
-#   'cronometro.mjs',
-#   'deno.mjs',
-#   'isitfast.js',
-#   'mitata.mjs',
-#   'tinybench.mjs'
-# ]
-
 # clean previous logs
 rm -f ./benchs/**/*.log
 
@@ -37,9 +21,3 @@ do
     node "./$filename" | sed "s,\x1B\[[0-9;]*m,,g" >> "$filename.log"
   fi
 done
-
-# for suite in $suites; do
-  # for bench in $benchmarks; do
-    # node $suite/$bench >> $bench.log
-  # done
-# done
