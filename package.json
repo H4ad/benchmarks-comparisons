@@ -5,12 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Vinícius Lourenço",
   "license": "ISC",
   "dependencies": {
     "@types/benchmark": "^2.1.3",
     "benchmark": "2.1.4",
+    "cronometro": "^1.2.0",
     "isitfast": "^0.0.8",
-    "mitata": "^0.1.6"
+    "mitata": "^0.1.6",
+    "tinybench": "^2.5.1"
   }
 }

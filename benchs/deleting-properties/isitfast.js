@@ -1,11 +1,12 @@
-import { Suite } from 'benchmark';
+const { suite, useTerminal } = require('isitfast');
 
-const suite = Suite();
+process.stdout.clearLine = () => {};
+process.stdout.cursorTo = () => {};
 
-const NullObject = function NullObject () { }
+const NullObject = function NullObject() { }
 NullObject.prototype = Object.create(null)
 
-suite
+const bench = suite('Deleting Properties')
   .add('Using delete property', function () {
     const data = { x: 1, y: 2, z: 3 }
     delete data.y
@@ -13,16 +14,14 @@ suite
     data.x
     data.y
     data.z
-  })
-  .add('Using delete property (proto: null)', function () {
+  }).add('Using delete property (proto: null)', function () {
     const data = { __proto__: null, x: 1, y: 2, z: 3 }
     delete data.y
 
     data.x
     data.y
     data.z
-  })
-  .add('Using delete property (cached proto: null)', function () {
+  }).add('Using delete property (cached proto: null)', function () {
     const data = new NullObject()
 
     data.x = 1
@@ -34,24 +33,21 @@ suite
     data.x
     data.y
     data.z
-  })
-  .add('Using undefined assignment', function () {
+  }).add('Using undefined assignment', function () {
     const data = { x: 1, y: 2, z: 3 }
     data.y = undefined
 
     data.x
     data.y
     data.z
-  })
-  .add('Using undefined assignment (proto: null)', function () {
+  }).add('Using undefined assignment (proto: null)', function () {
     const data = { __proto__: null, x: 1, y: 2, z: 3 }
     data.y = undefined
 
     data.x
     data.y
     data.z
-  })
-  .add('Using undefined property (cached proto: null)', function () {
+  }).add('Using undefined property (cached proto: null)', function () {
     const data = new NullObject()
 
     data.x = 1
@@ -63,8 +59,10 @@ suite
     data.x
     data.y
     data.z
-  })
-  .on('cycle', event => {
-    console.log(event.target.toString())
-  })
-  .run({ async: false })
+  });
+
+(async () => {
+  useTerminal();
+
+  await bench.run();
+})();
