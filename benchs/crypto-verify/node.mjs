@@ -12,8 +12,6 @@ const thing = 'hello world'
 const algorithm = 'RSA-SHA256'
 const signature = crypto.createSign(algorithm).update(thing).sign(rsaPrivateKey, 'base64')
 
-console.log(signature);
-
 const suite = new Suite();
 
 suite

@@ -1,9 +1,8 @@
-import { readFileSync } from 'node:fs';
+import { bench, group, run } from 'mitata';
 import crypto from 'node:crypto';
-import { bench, run } from 'mitata';
+import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { group } from 'node:console';
 
 const currentFile = resolve(fileURLToPath(import.meta.url), '..');
 const rsaPrivateKey = readFileSync(`${currentFile}/private-key.pem`, 'utf-8');

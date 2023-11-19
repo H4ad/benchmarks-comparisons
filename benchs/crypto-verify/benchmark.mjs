@@ -23,4 +23,7 @@ suite
   .add(`crypto.verify('${algorithm}')`, function () {
     crypto.verify(algorithm, thing, rsaPublicKey, Buffer.from(signature, 'base64'))
   })
+  .on('cycle', event => {
+    console.log(event.target.toString())
+  })
   .run({ async: false });

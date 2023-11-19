@@ -3,14 +3,14 @@
 ## benchmark.mjs.log
 
 ```txt
-single with matcher x 668,122 ops/sec ±0.42% (98 runs sampled)
-multiple replaces x 555,467 ops/sec ±0.38% (99 runs sampled)
+single with matcher x 653,791 ops/sec ±0.81% (94 runs sampled)
+multiple replaces x 551,872 ops/sec ±0.40% (98 runs sampled)
 ----------------------------------------------------------------------------
-single with matcher x 659,847 ops/sec ±1.25% (92 runs sampled)
-multiple replaces x 552,018 ops/sec ±0.72% (96 runs sampled)
+single with matcher x 663,020 ops/sec ±0.74% (95 runs sampled)
+multiple replaces x 543,458 ops/sec ±0.87% (95 runs sampled)
 ----------------------------------------------------------------------------
-single with matcher x 672,346 ops/sec ±0.65% (96 runs sampled)
-multiple replaces x 551,931 ops/sec ±0.43% (99 runs sampled)
+single with matcher x 662,353 ops/sec ±0.73% (95 runs sampled)
+multiple replaces x 542,899 ops/sec ±0.74% (94 runs sampled)
 ----------------------------------------------------------------------------
 ```
 
@@ -20,33 +20,33 @@ multiple replaces x 551,931 ops/sec ±0.43% (99 runs sampled)
 ╔═════════════════════╤═════════╤══════════════════╤═══════════╤═════════════════════════╗
 ║ Slower tests        │ Samples │           Result │ Tolerance │ Difference with slowest ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
-║ multiple replaces   │   10000 │ 492994.57 op/sec │  ± 1.98 % │                         ║
+║ multiple replaces   │   10000 │ 511638.42 op/sec │  ± 2.10 % │                         ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
 ║ Fastest test        │ Samples │           Result │ Tolerance │ Difference with slowest ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
-║ single with matcher │    1000 │ 609617.45 op/sec │  ± 0.72 % │ + 23.66 %               ║
+║ single with matcher │   10000 │ 582435.57 op/sec │  ± 1.96 % │ + 13.84 %               ║
 ╚═════════════════════╧═════════╧══════════════════╧═══════════╧═════════════════════════╝
 
 ----------------------------------------------------------------------------
 ╔═════════════════════╤═════════╤══════════════════╤═══════════╤═════════════════════════╗
 ║ Slower tests        │ Samples │           Result │ Tolerance │ Difference with slowest ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
-║ multiple replaces   │   10000 │ 525866.04 op/sec │  ± 1.67 % │                         ║
+║ multiple replaces   │   10000 │ 534356.73 op/sec │  ± 1.58 % │                         ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
 ║ Fastest test        │ Samples │           Result │ Tolerance │ Difference with slowest ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
-║ single with matcher │   10000 │ 602012.96 op/sec │  ± 1.38 % │ + 14.48 %               ║
+║ single with matcher │    1500 │ 616696.95 op/sec │  ± 0.77 % │ + 15.41 %               ║
 ╚═════════════════════╧═════════╧══════════════════╧═══════════╧═════════════════════════╝
 
 ----------------------------------------------------------------------------
 ╔═════════════════════╤═════════╤══════════════════╤═══════════╤═════════════════════════╗
 ║ Slower tests        │ Samples │           Result │ Tolerance │ Difference with slowest ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
-║ multiple replaces   │   10000 │ 512120.80 op/sec │  ± 1.89 % │                         ║
+║ multiple replaces   │   10000 │ 537897.17 op/sec │  ± 1.89 % │                         ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
 ║ Fastest test        │ Samples │           Result │ Tolerance │ Difference with slowest ║
 ╟─────────────────────┼─────────┼──────────────────┼───────────┼─────────────────────────╢
-║ single with matcher │   10000 │ 628552.90 op/sec │  ± 1.55 % │ + 22.74 %               ║
+║ single with matcher │   10000 │ 598776.65 op/sec │  ± 1.98 % │ + 11.32 %               ║
 ╚═════════════════════╧═════════╧══════════════════╧═══════════╧═════════════════════════╝
 
 ----------------------------------------------------------------------------
@@ -63,16 +63,14 @@ benchmark                time (avg)        iter/s             (min … max)     
 ------------------------------------------------------------------------- -----------------------------
 
 
-single with matcher      13.77 µs/iter      72,616.9    (12.95 µs … 14.5 µs)  14.22 µs   14.5 µs   14.5 µs
-Warning: start() and end() calls in "single with matcher" are ignored because it averages less
-than 0.01s per iteration. Remove them for better results.
-multiple replaces        13.67 µs/iter      73,145.4   (13.06 µs … 15.54 µs)  13.71 µs  15.54 µs  15.54 µs
+single with matcher       2.13 µs/iter     468,384.1     (1.66 µs … 1.77 ms)   2.05 µs   3.87 µs   4.71 µs
+multiple replaces        14.32 µs/iter      69,819.2    (13.6 µs … 15.43 µs)  14.68 µs  15.43 µs  15.43 µs
 Warning: start() and end() calls in "multiple replaces" are ignored because it averages less
 than 0.01s per iteration. Remove them for better results.
 
 summary
-  multiple replaces
-   1.01x faster than single with matcher
+  single with matcher
+   6.71x faster than multiple replaces
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
@@ -82,16 +80,14 @@ benchmark                time (avg)        iter/s             (min … max)     
 ------------------------------------------------------------------------- -----------------------------
 
 
-single with matcher      13.73 µs/iter      72,815.5    (12.89 µs … 15.4 µs)  13.96 µs   15.4 µs   15.4 µs
-Warning: start() and end() calls in "single with matcher" are ignored because it averages less
-than 0.01s per iteration. Remove them for better results.
-multiple replaces        13.75 µs/iter      72,735.7   (13.02 µs … 14.63 µs)  14.18 µs  14.63 µs  14.63 µs
+single with matcher       2.15 µs/iter     464,468.2    (1.65 µs … 34.98 µs)   2.15 µs   3.87 µs   4.79 µs
+multiple replaces        14.04 µs/iter      71,235.0   (13.21 µs … 15.26 µs)   14.2 µs  15.26 µs  15.26 µs
 Warning: start() and end() calls in "multiple replaces" are ignored because it averages less
 than 0.01s per iteration. Remove them for better results.
 
 summary
   single with matcher
-   1x faster than multiple replaces
+   6.52x faster than multiple replaces
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
@@ -101,16 +97,16 @@ benchmark                time (avg)        iter/s             (min … max)     
 ------------------------------------------------------------------------- -----------------------------
 
 
-single with matcher      13.89 µs/iter      71,986.0    (13.1 µs … 14.56 µs)  14.25 µs  14.56 µs  14.56 µs
+single with matcher      13.81 µs/iter      72,422.0   (13.17 µs … 14.67 µs)  13.99 µs  14.67 µs  14.67 µs
 Warning: start() and end() calls in "single with matcher" are ignored because it averages less
 than 0.01s per iteration. Remove them for better results.
-multiple replaces        14.26 µs/iter      70,102.1    (13.5 µs … 15.07 µs)  14.58 µs  15.07 µs  15.07 µs
+multiple replaces        13.93 µs/iter      71,769.3   (13.25 µs … 15.26 µs)  14.36 µs  15.26 µs  15.26 µs
 Warning: start() and end() calls in "multiple replaces" are ignored because it averages less
 than 0.01s per iteration. Remove them for better results.
 
 summary
   single with matcher
-   1.03x faster than multiple replaces
+   1.01x faster than multiple replaces
 ----------------------------------------------------------------------------
 ```
 
@@ -125,42 +121,42 @@ benchmark                time (avg)        iter/s             (min … max)     
 ------------------------------------------------------------------------- -----------------------------
 
 
-single with matcher       1.53 µs/iter     651,918.0     (1.49 µs … 1.85 µs)   1.54 µs   1.85 µs   1.85 µs
-multiple replaces         1.78 µs/iter     561,622.0     (1.77 µs … 1.79 µs)   1.78 µs   1.79 µs   1.79 µs
-
-summary
-  single with matcher
-   1.16x faster than multiple replaces
-----------------------------------------------------------------------------
-cpu: AMD Ryzen 9 5950X 16-Core Processor
-runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
-
-file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/string-replace/deno.mjs
-benchmark                time (avg)        iter/s             (min … max)       p75       p99      p995
-------------------------------------------------------------------------- -----------------------------
-
-
-single with matcher       1.52 µs/iter     658,036.6     (1.47 µs … 1.85 µs)   1.52 µs   1.85 µs   1.85 µs
-multiple replaces         1.74 µs/iter     574,346.0     (1.71 µs … 1.76 µs)   1.75 µs   1.76 µs   1.76 µs
-
-summary
-  single with matcher
-   1.15x faster than multiple replaces
-----------------------------------------------------------------------------
-cpu: AMD Ryzen 9 5950X 16-Core Processor
-runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
-
-file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/string-replace/deno.mjs
-benchmark                time (avg)        iter/s             (min … max)       p75       p99      p995
-------------------------------------------------------------------------- -----------------------------
-
-
-single with matcher       1.54 µs/iter     649,954.2     (1.49 µs … 1.68 µs)   1.53 µs   1.68 µs   1.68 µs
-multiple replaces         1.79 µs/iter     557,451.9     (1.77 µs … 1.81 µs)    1.8 µs   1.81 µs   1.81 µs
+single with matcher       1.54 µs/iter     648,998.8     (1.48 µs … 1.93 µs)   1.55 µs   1.93 µs   1.93 µs
+multiple replaces          1.8 µs/iter     554,456.9     (1.78 µs … 2.11 µs)    1.8 µs   2.11 µs   2.11 µs
 
 summary
   single with matcher
    1.17x faster than multiple replaces
+----------------------------------------------------------------------------
+cpu: AMD Ryzen 9 5950X 16-Core Processor
+runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
+
+file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/string-replace/deno.mjs
+benchmark                time (avg)        iter/s             (min … max)       p75       p99      p995
+------------------------------------------------------------------------- -----------------------------
+
+
+single with matcher        1.6 µs/iter     623,306.8      (1.5 µs … 2.15 µs)   1.59 µs   2.15 µs   2.15 µs
+multiple replaces         1.81 µs/iter     553,866.7     (1.78 µs … 2.11 µs)    1.8 µs   2.11 µs   2.11 µs
+
+summary
+  single with matcher
+   1.13x faster than multiple replaces
+----------------------------------------------------------------------------
+cpu: AMD Ryzen 9 5950X 16-Core Processor
+runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
+
+file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/string-replace/deno.mjs
+benchmark                time (avg)        iter/s             (min … max)       p75       p99      p995
+------------------------------------------------------------------------- -----------------------------
+
+
+single with matcher       1.57 µs/iter     637,719.1     (1.47 µs … 2.81 µs)   1.56 µs   2.81 µs   2.81 µs
+multiple replaces         1.79 µs/iter     559,891.8     (1.71 µs … 1.87 µs)   1.83 µs   1.87 µs   1.87 µs
+
+summary
+  single with matcher
+   1.14x faster than multiple replaces
 ----------------------------------------------------------------------------
 ```
 
@@ -169,22 +165,10 @@ summary
 ```txt
 String Replace:
 
-single with matchersingle with matcher 315,855.97 op/s (3,166 ns) ±1% x2,500
+single with matchersingle with matcher 648,088.14 op/s (1,543 ns) ±1% x2,500
                     808 kB ±0.6% x25
 
-multiple replacesmultiple replaces   560,852.496 op/s (1,783 ns) ±1% x2,500
-                    4,072 kB ±0.1% x25
-
-=> Slowest is single with matcher
-=> Fastest is multiple replaces
-
-----------------------------------------------------------------------------
-String Replace:
-
-single with matchersingle with matcher 674,308.833 op/s (1,483 ns) ±1% x2,500
-                    808 kB ±0.6% x25
-
-multiple replacesmultiple replaces   580,383.053 op/s (1,723 ns) ±1% x2,500
+multiple replacesmultiple replaces   557,724.484 op/s (1,793 ns) ±1% x2,500
                     4,072 kB ±0.1% x25
 
 => Slowest is multiple replaces
@@ -193,10 +177,22 @@ multiple replacesmultiple replaces   580,383.053 op/s (1,723 ns) ±1% x2,500
 ----------------------------------------------------------------------------
 String Replace:
 
-single with matchersingle with matcher 683,994.528 op/s (1,462 ns) ±1% x2,500
+single with matchersingle with matcher 669,792.364 op/s (1,493 ns) ±1% x2,500
                     808 kB ±0.6% x25
 
-multiple replacesmultiple replaces   583,430.572 op/s (1,714 ns) ±1% x2,500
+multiple replacesmultiple replaces   560,852.496 op/s (1,783 ns) ±1% x2,500
+                    4,072 kB ±0.1% x25
+
+=> Slowest is multiple replaces
+=> Fastest is single with matcher
+
+----------------------------------------------------------------------------
+String Replace:
+
+single with matchersingle with matcher 678,886.626 op/s (1,473 ns) ±1% x2,500
+                    808 kB ±0.6% x25
+
+multiple replacesmultiple replaces   570,125.428 op/s (1,754 ns) ±1% x2,500
                     4,072 kB ±0.1% x25
 
 => Slowest is multiple replaces
@@ -213,20 +209,8 @@ runtime: node v21.1.0 (x64-linux)
 
 benchmark                time (avg)             (min … max)
 -----------------------------------------------------------
-single with matcher    1.59 µs/iter     (1.48 µs … 1.84 µs)
-multiple replaces      1.95 µs/iter     (1.78 µs … 2.83 µs)
-
-summary
-  single with matcher
-   1.23x faster than multiple replaces
-----------------------------------------------------------------------------
-cpu: AMD Ryzen 9 5950X 16-Core Processor
-runtime: node v21.1.0 (x64-linux)
-
-benchmark                time (avg)             (min … max)
------------------------------------------------------------
-single with matcher    1.48 µs/iter     (1.44 µs … 1.56 µs)
-multiple replaces      1.77 µs/iter     (1.75 µs … 1.86 µs)
+single with matcher    1.51 µs/iter     (1.49 µs … 1.79 µs)
+multiple replaces      1.81 µs/iter     (1.78 µs … 1.93 µs)
 
 summary
   single with matcher
@@ -237,40 +221,52 @@ runtime: node v21.1.0 (x64-linux)
 
 benchmark                time (avg)             (min … max)
 -----------------------------------------------------------
-single with matcher    1.45 µs/iter     (1.44 µs … 1.53 µs)
-multiple replaces      1.75 µs/iter     (1.73 µs … 1.81 µs)
+single with matcher    1.48 µs/iter     (1.44 µs … 1.61 µs)
+multiple replaces      1.84 µs/iter     (1.78 µs … 2.33 µs)
 
 summary
   single with matcher
-   1.2x faster than multiple replaces
+   1.24x faster than multiple replaces
+----------------------------------------------------------------------------
+cpu: AMD Ryzen 9 5950X 16-Core Processor
+runtime: node v21.1.0 (x64-linux)
+
+benchmark                time (avg)             (min … max)
+-----------------------------------------------------------
+single with matcher    1.51 µs/iter     (1.46 µs … 1.73 µs)
+multiple replaces      1.82 µs/iter     (1.76 µs … 2.27 µs)
+
+summary
+  single with matcher
+   1.21x faster than multiple replaces
 ----------------------------------------------------------------------------
 ```
 
 ## node.managed.mjs.log
 
 ```txt
-single with matcher x 609,364 ops/sec +/- 0% (10 runs sampled)	min..max=(1.63us ... 1.65us) p75=1.64us p99=1.65us
-multiple replaces x 537,511 ops/sec +/- 0.02% (11 runs sampled)	min..max=(1.83us ... 1.95us) p75=1.91us p99=1.95us
+single with matcher x 593,761 ops/sec +/- 0.03% (10 runs sampled)	min..max=(1.64us ... 1.78us) p75=1.65us p99=1.78us
+multiple replaces x 544,332 ops/sec +/- 0.03% (11 runs sampled)	min..max=(1.80us ... 1.93us) p75=1.87us p99=1.93us
 ----------------------------------------------------------------------------
-single with matcher x 577,463 ops/sec +/- 0.01% (9 runs sampled)	min..max=(1.69us ... 1.74us) p75=1.73us p99=1.74us
-multiple replaces x 526,321 ops/sec +/- 0.02% (11 runs sampled)	min..max=(1.86us ... 2.00us) p75=1.94us p99=2.00us
+single with matcher x 591,821 ops/sec +/- 0.01% (9 runs sampled)	min..max=(1.67us ... 1.71us) p75=1.68us p99=1.71us
+multiple replaces x 537,936 ops/sec +/- 0.02% (11 runs sampled)	min..max=(1.83us ... 1.93us) p75=1.91us p99=1.93us
 ----------------------------------------------------------------------------
-single with matcher x 552,156 ops/sec +/- 0.07% (11 runs sampled)	min..max=(1.64us ... 2.04us) p75=1.91us p99=2.04us
-multiple replaces x 526,808 ops/sec +/- 0.02% (11 runs sampled)	min..max=(1.79us ... 1.92us) p75=1.91us p99=1.92us
+single with matcher x 573,272 ops/sec +/- 0.06% (11 runs sampled)	min..max=(1.66us ... 2.02us) p75=1.82us p99=2.02us
+multiple replaces x 527,431 ops/sec +/- 0.03% (10 runs sampled)	min..max=(1.82us ... 1.99us) p75=1.87us p99=1.99us
 ----------------------------------------------------------------------------
 ```
 
 ## node.mjs.log
 
 ```txt
-single with matcher x 597,916 ops/sec +/- 0.01% (10 runs sampled)	min..max=(1.64us ... 1.68us) p75=1.67us p99=1.68us
-multiple replaces x 542,780 ops/sec +/- 0.02% (11 runs sampled)	min..max=(1.81us ... 1.89us) p75=1.87us p99=1.89us
+single with matcher x 581,120 ops/sec +/- 0.02% (11 runs sampled)	min..max=(1.70us ... 1.80us) p75=1.76us p99=1.80us
+multiple replaces x 530,485 ops/sec +/- 0.03% (10 runs sampled)	min..max=(1.81us ... 2.01us) p75=1.87us p99=2.01us
 ----------------------------------------------------------------------------
-single with matcher x 597,182 ops/sec +/- 0.02% (12 runs sampled)	min..max=(1.63us ... 1.73us) p75=1.68us p99=1.73us
-multiple replaces x 526,417 ops/sec +/- 0.02% (11 runs sampled)	min..max=(1.77us ... 1.92us) p75=1.90us p99=1.92us
+single with matcher x 573,657 ops/sec +/- 0.01% (9 runs sampled)	min..max=(1.72us ... 1.74us) p75=1.74us p99=1.74us
+multiple replaces x 532,497 ops/sec +/- 0.03% (11 runs sampled)	min..max=(1.83us ... 1.97us) p75=1.92us p99=1.97us
 ----------------------------------------------------------------------------
-single with matcher x 575,262 ops/sec +/- 0.03% (10 runs sampled)	min..max=(1.68us ... 1.81us) p75=1.79us p99=1.81us
-multiple replaces x 509,610 ops/sec +/- 0.07% (10 runs sampled)	min..max=(1.84us ... 2.24us) p75=2.04us p99=2.24us
+single with matcher x 580,781 ops/sec +/- 0.03% (13 runs sampled)	min..max=(1.63us ... 1.82us) p75=1.74us p99=1.82us
+multiple replaces x 509,197 ops/sec +/- 0.03% (11 runs sampled)	min..max=(1.87us ... 2.01us) p75=1.95us p99=2.01us
 ----------------------------------------------------------------------------
 ```
 
@@ -280,22 +276,22 @@ multiple replaces x 509,610 ops/sec +/- 0.07% (10 runs sampled)	min..max=(1.84us
 ┌─────────┬───────────────────────┬───────────┬────────────────────┬──────────┬─────────┐
 │ (index) │       Task Name       │  ops/sec  │ Average Time (ns)  │  Margin  │ Samples │
 ├─────────┼───────────────────────┼───────────┼────────────────────┼──────────┼─────────┤
-│    0    │ 'single with matcher' │ '644,331' │ 1551.9956376514692 │ '±1.01%' │  64434  │
-│    1    │  'multiple replaces'  │ '544,751' │ 1835.6984167811308 │ '±0.81%' │  54476  │
+│    0    │ 'single with matcher' │ '625,261' │  1599.33106178657  │ '±1.00%' │  62527  │
+│    1    │  'multiple replaces'  │ '543,328' │ 1840.5076699803499 │ '±0.76%' │  54333  │
 └─────────┴───────────────────────┴───────────┴────────────────────┴──────────┴─────────┘
 ----------------------------------------------------------------------------
 ┌─────────┬───────────────────────┬───────────┬────────────────────┬──────────┬─────────┐
 │ (index) │       Task Name       │  ops/sec  │ Average Time (ns)  │  Margin  │ Samples │
 ├─────────┼───────────────────────┼───────────┼────────────────────┼──────────┼─────────┤
-│    0    │ 'single with matcher' │ '645,434' │ 1549.3435265143607 │ '±1.08%' │  64544  │
-│    1    │  'multiple replaces'  │ '550,019' │ 1818.117981088525  │ '±0.81%' │  55002  │
+│    0    │ 'single with matcher' │ '621,555' │ 1608.8660745763727 │ '±1.16%' │  62156  │
+│    1    │  'multiple replaces'  │ '548,600' │ 1822.8195637947458 │ '±0.75%' │  54861  │
 └─────────┴───────────────────────┴───────────┴────────────────────┴──────────┴─────────┘
 ----------------------------------------------------------------------------
 ┌─────────┬───────────────────────┬───────────┬────────────────────┬──────────┬─────────┐
 │ (index) │       Task Name       │  ops/sec  │ Average Time (ns)  │  Margin  │ Samples │
 ├─────────┼───────────────────────┼───────────┼────────────────────┼──────────┼─────────┤
-│    0    │ 'single with matcher' │ '630,452' │ 1586.162701416461  │ '±1.29%' │  63046  │
-│    1    │  'multiple replaces'  │ '528,341' │ 1892.7142462599995 │ '±0.78%' │  52835  │
+│    0    │ 'single with matcher' │ '638,388' │ 1566.443727283815  │ '±0.95%' │  63839  │
+│    1    │  'multiple replaces'  │ '516,519' │ 1936.0371363140607 │ '±1.08%' │  51652  │
 └─────────┴───────────────────────┴───────────┴────────────────────┴──────────┴─────────┘
 ----------------------------------------------------------------------------
 ```

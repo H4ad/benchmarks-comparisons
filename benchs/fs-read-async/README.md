@@ -3,14 +3,14 @@
 ## benchmark.mjs.log
 
 ```txt
-readFile x 30,857 ops/sec ±2.13% (80 runs sampled)
-readFile utf-8 x 32,308 ops/sec ±0.82% (87 runs sampled)
+readFile x 30,112 ops/sec ±1.55% (71 runs sampled)
+readFile utf-8 x 27,643 ops/sec ±0.92% (84 runs sampled)
 ----------------------------------------------------------------------------
-readFile x 31,776 ops/sec ±0.92% (86 runs sampled)
-readFile utf-8 x 42,665 ops/sec ±2.28% (82 runs sampled)
+readFile x 31,578 ops/sec ±2.29% (73 runs sampled)
+readFile utf-8 x 29,396 ops/sec ±1.62% (79 runs sampled)
 ----------------------------------------------------------------------------
-readFile x 32,272 ops/sec ±1.15% (85 runs sampled)
-readFile utf-8 x 33,458 ops/sec ±2.20% (77 runs sampled)
+readFile x 29,747 ops/sec ±1.42% (72 runs sampled)
+readFile utf-8 x 28,820 ops/sec ±1.13% (81 runs sampled)
 ----------------------------------------------------------------------------
 ```
 
@@ -20,33 +20,33 @@ readFile utf-8 x 33,458 ops/sec ±2.20% (77 runs sampled)
 ╔════════════════╤═════════╤═════════════════╤═══════════╤═════════════════════════╗
 ║ Slower tests   │ Samples │          Result │ Tolerance │ Difference with slowest ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
-║ readFile utf-8 │    2000 │ 28107.40 op/sec │  ± 0.90 % │                         ║
+║ readFile utf-8 │    3500 │ 24123.57 op/sec │  ± 0.90 % │                         ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
 ║ Fastest test   │ Samples │          Result │ Tolerance │ Difference with slowest ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
-║ readFile       │    4000 │ 30184.89 op/sec │  ± 0.92 % │ + 7.39 %                ║
+║ readFile       │    3000 │ 37763.55 op/sec │  ± 0.97 % │ + 56.54 %               ║
 ╚════════════════╧═════════╧═════════════════╧═══════════╧═════════════════════════╝
 
 ----------------------------------------------------------------------------
 ╔════════════════╤═════════╤═════════════════╤═══════════╤═════════════════════════╗
 ║ Slower tests   │ Samples │          Result │ Tolerance │ Difference with slowest ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
-║ readFile utf-8 │    2000 │ 21197.45 op/sec │  ± 0.97 % │                         ║
+║ readFile       │    2500 │ 26393.12 op/sec │  ± 0.93 % │                         ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
 ║ Fastest test   │ Samples │          Result │ Tolerance │ Difference with slowest ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
-║ readFile       │    2500 │ 32396.80 op/sec │  ± 0.87 % │ + 52.83 %               ║
+║ readFile utf-8 │    5000 │ 33990.70 op/sec │  ± 0.95 % │ + 28.79 %               ║
 ╚════════════════╧═════════╧═════════════════╧═══════════╧═════════════════════════╝
 
 ----------------------------------------------------------------------------
 ╔════════════════╤═════════╤═════════════════╤═══════════╤═════════════════════════╗
 ║ Slower tests   │ Samples │          Result │ Tolerance │ Difference with slowest ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
-║ readFile utf-8 │    2500 │ 28750.35 op/sec │  ± 0.92 % │                         ║
+║ readFile       │    4000 │ 26134.36 op/sec │  ± 0.91 % │                         ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
 ║ Fastest test   │ Samples │          Result │ Tolerance │ Difference with slowest ║
 ╟────────────────┼─────────┼─────────────────┼───────────┼─────────────────────────╢
-║ readFile       │    5000 │ 30154.37 op/sec │  ± 0.98 % │ + 4.88 %                ║
+║ readFile utf-8 │    3500 │ 26801.56 op/sec │  ± 0.99 % │ + 2.55 %                ║
 ╚════════════════╧═════════╧═════════════════╧═══════════╧═════════════════════════╝
 
 ----------------------------------------------------------------------------
@@ -61,8 +61,8 @@ runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
 file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/fs-read-async/deno.managed.mjs
 benchmark           time (avg)        iter/s             (min … max)       p75       p99      p995
 -------------------------------------------------------------------- -----------------------------
-readFile            18.03 µs/iter      55,466.2     (11.2 µs … 4.27 ms)  17.23 µs  28.03 µs  34.34 µs
-readFile utf-8      21.99 µs/iter      45,481.4     (13.18 µs … 8.5 ms)  20.48 µs  34.37 µs  39.04 µs
+readFile            18.96 µs/iter      52,728.7    (11.91 µs … 5.79 ms)  17.61 µs  39.21 µs  44.72 µs
+readFile utf-8      31.01 µs/iter      32,251.8    (16.71 µs … 5.15 ms)  31.02 µs  54.94 µs  76.37 µs
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
@@ -70,8 +70,8 @@ runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
 file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/fs-read-async/deno.managed.mjs
 benchmark           time (avg)        iter/s             (min … max)       p75       p99      p995
 -------------------------------------------------------------------- -----------------------------
-readFile            29.76 µs/iter      33,603.3     (18.91 µs … 4.7 ms)  29.05 µs  44.04 µs  51.33 µs
-readFile utf-8      29.71 µs/iter      33,662.1    (20.54 µs … 6.02 ms)  28.82 µs  40.81 µs  46.32 µs
+readFile             23.8 µs/iter      42,015.0    (13.57 µs … 4.16 ms)  25.18 µs  46.46 µs  55.13 µs
+readFile utf-8      26.12 µs/iter      38,277.5    (13.23 µs … 6.04 ms)  29.58 µs   48.9 µs  59.59 µs
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
@@ -79,8 +79,8 @@ runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
 file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/fs-read-async/deno.managed.mjs
 benchmark           time (avg)        iter/s             (min … max)       p75       p99      p995
 -------------------------------------------------------------------- -----------------------------
-readFile            18.51 µs/iter      54,030.7    (10.96 µs … 6.03 ms)  16.63 µs  35.64 µs  40.07 µs
-readFile utf-8      22.65 µs/iter      44,150.1   (12.58 µs … 10.44 ms)  20.16 µs  24.78 µs  28.25 µs
+readFile            24.35 µs/iter      41,062.7    (11.01 µs … 3.58 ms)  27.81 µs  60.41 µs  84.92 µs
+readFile utf-8      23.24 µs/iter      43,029.3    (13.46 µs … 8.38 ms)  20.95 µs  41.78 µs   46.5 µs
 ----------------------------------------------------------------------------
 ```
 
@@ -93,8 +93,8 @@ runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
 file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/fs-read-async/deno.mjs
 benchmark           time (avg)        iter/s             (min … max)       p75       p99      p995
 -------------------------------------------------------------------- -----------------------------
-readFile            12.78 µs/iter      78,259.5   (8.58 µs … 392.33 µs)  14.34 µs   25.4 µs  30.79 µs
-readFile utf-8      19.55 µs/iter      51,156.1  (12.06 µs … 180.29 µs)  21.95 µs  31.79 µs   37.3 µs
+readFile            20.01 µs/iter      49,982.5  (11.64 µs … 741.81 µs)  21.26 µs  37.83 µs   47.9 µs
+readFile utf-8      19.25 µs/iter      51,953.4   (9.11 µs … 389.93 µs)  22.71 µs  38.79 µs  48.89 µs
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
@@ -102,8 +102,8 @@ runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
 file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/fs-read-async/deno.mjs
 benchmark           time (avg)        iter/s             (min … max)       p75       p99      p995
 -------------------------------------------------------------------- -----------------------------
-readFile            18.91 µs/iter      52,873.7  (10.67 µs … 576.19 µs)  20.35 µs  33.08 µs   43.3 µs
-readFile utf-8      20.45 µs/iter      48,902.1   (11.6 µs … 408.36 µs)  21.87 µs   38.8 µs  62.91 µs
+readFile            16.18 µs/iter      61,816.2   (8.82 µs … 652.44 µs)  19.23 µs  31.81 µs  37.04 µs
+readFile utf-8       14.3 µs/iter      69,925.2   (8.01 µs … 285.95 µs)  16.31 µs  28.43 µs  33.72 µs
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
@@ -111,8 +111,8 @@ runtime: deno 1.37.1 (x86_64-unknown-linux-gnu)
 file:///home/h4ad/Projects/opensource/benchmarks-comparisons/benchs/fs-read-async/deno.mjs
 benchmark           time (avg)        iter/s             (min … max)       p75       p99      p995
 -------------------------------------------------------------------- -----------------------------
-readFile            12.55 µs/iter      79,681.3   (8.83 µs … 470.99 µs)  14.54 µs  20.75 µs  22.87 µs
-readFile utf-8      12.88 µs/iter      77,621.7  (10.51 µs … 237.87 µs)  14.37 µs  19.89 µs  22.13 µs
+readFile             20.5 µs/iter      48,773.4   (11.78 µs … 628.1 µs)  22.16 µs  42.69 µs  54.65 µs
+readFile utf-8      18.19 µs/iter      54,963.2    (10.08 µs … 1.06 ms)  22.01 µs  39.02 µs  50.95 µs
 ----------------------------------------------------------------------------
 ```
 
@@ -121,38 +121,38 @@ readFile utf-8      12.88 µs/iter      77,621.7  (10.51 µs … 237.87 µs)  14
 ```txt
 read file:
 
-readFilereadFile       404,040.404 op/s (2,475 ns) ±1% x2,500
+readFilereadFile       360,360.36 op/s (2,775 ns) ±1% x2,500
                1,560 kB ±0.3% x25
 
-readFile utf-8readFile utf-8 400,962.31 op/s (2,494 ns) ±1% x2,500
+readFile utf-8readFile utf-8 447,427.293 op/s (2,235 ns) ±1% x2,500
                1,632 kB ±0.3% x25
 
-=> Slowest is readFile utf-8
-=> Fastest is readFile
+=> Slowest is readFile
+=> Fastest is readFile utf-8
 
 ----------------------------------------------------------------------------
 read file:
 
-readFilereadFile       486,854.917 op/s (2,054 ns) ±1% x2,500
+readFilereadFile       396,039.604 op/s (2,525 ns) ±1% x2,500
                1,560 kB ±0.3% x25
 
-readFile utf-8readFile utf-8 380,952.381 op/s (2,625 ns) ±1% x2,500
-               1,632 kB ±0.3% x25
-
-=> Slowest is readFile utf-8
-=> Fastest is readFile
-
-----------------------------------------------------------------------------
-read file:
-
-readFilereadFile       434,027.778 op/s (2,304 ns) ±1% x2,500
-               1,560 kB ±0.3% x25
-
-readFile utf-8readFile utf-8 365,630.713 op/s (2,735 ns) ±1% x2,500
+readFile utf-8readFile utf-8 352,733.686 op/s (2,835 ns) ±1% x2,500
                1,616 kB ±0.3% x25
 
 => Slowest is readFile utf-8
 => Fastest is readFile
+
+----------------------------------------------------------------------------
+read file:
+
+readFilereadFile       364,166.06 op/s (2,746 ns) ±1% x2,500
+               1,560 kB ±0.3% x25
+
+readFile utf-8readFile utf-8 421,052.632 op/s (2,375 ns) ±1% x2,500
+               1,632 kB ±0.3% x25
+
+=> Slowest is readFile
+=> Fastest is readFile utf-8
 
 ----------------------------------------------------------------------------
 ```
@@ -165,64 +165,64 @@ runtime: node v21.1.0 (x64-linux)
 
 benchmark           time (avg)             (min … max)
 ------------------------------------------------------
-readFile         33.96 µs/iter  (23.01 µs … 351.08 µs)
-readFile utf-8   32.99 µs/iter  (23.41 µs … 414.07 µs)
+readFile         32.43 µs/iter  (22.03 µs … 568.53 µs)
+readFile utf-8    32.3 µs/iter  (22.37 µs … 398.64 µs)
 
 summary
   readFile utf-8
-   1.03x faster than readFile
+   1x faster than readFile
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: node v21.1.0 (x64-linux)
 
 benchmark           time (avg)             (min … max)
 ------------------------------------------------------
-readFile         30.75 µs/iter  (23.52 µs … 398.87 µs)
-readFile utf-8   33.12 µs/iter  (23.91 µs … 324.09 µs)
+readFile         31.76 µs/iter   (22.08 µs … 330.2 µs)
+readFile utf-8   32.63 µs/iter  (22.47 µs … 529.86 µs)
 
 summary
   readFile
-   1.08x faster than readFile utf-8
+   1.03x faster than readFile utf-8
 ----------------------------------------------------------------------------
 cpu: AMD Ryzen 9 5950X 16-Core Processor
 runtime: node v21.1.0 (x64-linux)
 
 benchmark           time (avg)             (min … max)
 ------------------------------------------------------
-readFile         30.89 µs/iter   (23.39 µs … 495.2 µs)
-readFile utf-8   30.23 µs/iter   (23.55 µs … 316.4 µs)
+readFile         31.82 µs/iter   (22.29 µs … 541.5 µs)
+readFile utf-8   33.15 µs/iter      (22.5 µs … 606 µs)
 
 summary
-  readFile utf-8
-   1.02x faster than readFile
+  readFile
+   1.04x faster than readFile utf-8
 ----------------------------------------------------------------------------
 ```
 
 ## node.managed.mjs.log
 
 ```txt
-readFile x 31,879 ops/sec +/- 0.08% (12 runs sampled)	min..max=(28.93us ... 35.50us) p75=33.02us p99=35.50us
-readFile utf-8 x 31,992 ops/sec +/- 0.04% (11 runs sampled)	min..max=(29.53us ... 34.17us) p75=32.08us p99=34.17us
+readFile x 30,177 ops/sec +/- 0.09% (11 runs sampled)	min..max=(30.34us ... 39.34us) p75=33.35us p99=39.34us
+readFile utf-8 x 29,705 ops/sec +/- 0.05% (12 runs sampled)	min..max=(31.01us ... 36.13us) p75=35.16us p99=36.13us
 ----------------------------------------------------------------------------
-readFile x 40,057 ops/sec +/- 0.07% (12 runs sampled)	min..max=(22.97us ... 28.36us) p75=25.34us p99=28.36us
-readFile utf-8 x 38,049 ops/sec +/- 0.02% (10 runs sampled)	min..max=(24.86us ... 26.62us) p75=26.26us p99=26.62us
+readFile x 30,504 ops/sec +/- 0.06% (12 runs sampled)	min..max=(30.51us ... 35.70us) p75=34.32us p99=35.70us
+readFile utf-8 x 29,662 ops/sec +/- 0.06% (12 runs sampled)	min..max=(31.81us ... 37.53us) p75=35.59us p99=37.53us
 ----------------------------------------------------------------------------
-readFile x 32,814 ops/sec +/- 0.07% (11 runs sampled)	min..max=(28.70us ... 34.34us) p75=33.13us p99=34.34us
-readFile utf-8 x 32,839 ops/sec +/- 0.03% (12 runs sampled)	min..max=(29.07us ... 31.96us) p75=31.15us p99=31.96us
+readFile x 31,051 ops/sec +/- 0.06% (12 runs sampled)	min..max=(29.97us ... 36.72us) p75=32.21us p99=36.72us
+readFile utf-8 x 31,314 ops/sec +/- 0.06% (12 runs sampled)	min..max=(29.96us ... 37.09us) p75=33.25us p99=37.09us
 ----------------------------------------------------------------------------
 ```
 
 ## node.mjs.log
 
 ```txt
-readFile x 31,614 ops/sec +/- 0.08% (11 runs sampled)	min..max=(29.71us ... 37.10us) p75=34.48us p99=37.10us
-readFile utf-8 x 31,967 ops/sec +/- 0.03% (11 runs sampled)	min..max=(29.99us ... 32.70us) p75=31.99us p99=32.70us
+readFile x 30,170 ops/sec +/- 0.09% (11 runs sampled)	min..max=(30.22us ... 38.85us) p75=36.49us p99=38.85us
+readFile utf-8 x 27,050 ops/sec +/- 0.04% (10 runs sampled)	min..max=(34.96us ... 39.46us) p75=36.81us p99=39.46us
 ----------------------------------------------------------------------------
-readFile x 31,595 ops/sec +/- 0.09% (13 runs sampled)	min..max=(28.90us ... 36.93us) p75=33.23us p99=36.93us
-readFile utf-8 x 31,517 ops/sec +/- 0.03% (11 runs sampled)	min..max=(30.41us ... 33.15us) p75=32.59us p99=33.15us
+readFile x 29,537 ops/sec +/- 0.04% (11 runs sampled)	min..max=(31.13us ... 36.61us) p75=34.83us p99=36.61us
+readFile utf-8 x 28,718 ops/sec +/- 0.08% (12 runs sampled)	min..max=(29.05us ... 39.29us) p75=34.91us p99=39.29us
 ----------------------------------------------------------------------------
-readFile x 32,338 ops/sec +/- 0.08% (12 runs sampled)	min..max=(28.66us ... 36.77us) p75=32.35us p99=36.77us
-readFile utf-8 x 32,945 ops/sec +/- 0.04% (11 runs sampled)	min..max=(29.23us ... 32.76us) p75=30.99us p99=32.76us
+readFile x 29,418 ops/sec +/- 0.09% (12 runs sampled)	min..max=(27.69us ... 38.27us) p75=34.39us p99=38.27us
+readFile utf-8 x 30,512 ops/sec +/- 0.03% (10 runs sampled)	min..max=(31.07us ... 33.99us) p75=33.17us p99=33.99us
 ----------------------------------------------------------------------------
 ```
 
@@ -232,22 +232,22 @@ readFile utf-8 x 32,945 ops/sec +/- 0.04% (11 runs sampled)	min..max=(29.23us ..
 ┌─────────┬──────────────────┬──────────┬───────────────────┬──────────┬─────────┐
 │ (index) │    Task Name     │ ops/sec  │ Average Time (ns) │  Margin  │ Samples │
 ├─────────┼──────────────────┼──────────┼───────────────────┼──────────┼─────────┤
-│    0    │    'readFile'    │ '26,974' │ 37071.84320214923 │ '±1.26%' │  2698   │
-│    1    │ 'readFile utf-8' │ '26,644' │ 37531.5647366095  │ '±1.46%' │  2665   │
-└─────────┴──────────────────┴──────────┴───────────────────┴──────────┴─────────┘
-----------------------------------------------------------------------------
-┌─────────┬──────────────────┬──────────┬───────────────────┬──────────┬─────────┐
-│ (index) │    Task Name     │ ops/sec  │ Average Time (ns) │  Margin  │ Samples │
-├─────────┼──────────────────┼──────────┼───────────────────┼──────────┼─────────┤
-│    0    │    'readFile'    │ '26,542' │ 37675.84746145764 │ '±2.24%' │  2655   │
-│    1    │ 'readFile utf-8' │ '27,862' │ 35890.3419469013  │ '±1.60%' │  2787   │
+│    0    │    'readFile'    │ '27,774' │ 36003.65732098501 │ '±1.82%' │  2778   │
+│    1    │ 'readFile utf-8' │ '30,146' │ 33171.58339331992 │ '±1.45%' │  3015   │
 └─────────┴──────────────────┴──────────┴───────────────────┴──────────┴─────────┘
 ----------------------------------------------------------------------------
 ┌─────────┬──────────────────┬──────────┬────────────────────┬──────────┬─────────┐
 │ (index) │    Task Name     │ ops/sec  │ Average Time (ns)  │  Margin  │ Samples │
 ├─────────┼──────────────────┼──────────┼────────────────────┼──────────┼─────────┤
-│    0    │    'readFile'    │ '29,443' │ 33963.90899857712  │ '±1.28%' │  2945   │
-│    1    │ 'readFile utf-8' │ '31,615' │ 31630.165079121987 │ '±1.29%' │  3162   │
+│    0    │    'readFile'    │ '26,747' │ 37386.46990784974  │ '±2.12%' │  2675   │
+│    1    │ 'readFile utf-8' │ '31,043' │ 32212.983260768047 │ '±1.84%' │  3105   │
+└─────────┴──────────────────┴──────────┴────────────────────┴──────────┴─────────┘
+----------------------------------------------------------------------------
+┌─────────┬──────────────────┬──────────┬────────────────────┬──────────┬─────────┐
+│ (index) │    Task Name     │ ops/sec  │ Average Time (ns)  │  Margin  │ Samples │
+├─────────┼──────────────────┼──────────┼────────────────────┼──────────┼─────────┤
+│    0    │    'readFile'    │ '27,045' │ 36974.06576942935  │ '±1.80%' │  2705   │
+│    1    │ 'readFile utf-8' │ '27,319' │ 36604.086397349354 │ '±1.70%' │  2732   │
 └─────────┴──────────────────┴──────────┴────────────────────┴──────────┴─────────┘
 ----------------------------------------------------------------------------
 ```
